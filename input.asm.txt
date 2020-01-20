@@ -1,0 +1,27 @@
+.data 
+
+
+.code 
+foo: 
+push SF
+assign R4 12
+assign A3 a
+load R8 A3
+assign A3 b
+load R12 A3
+mul R8 R12
+assign R12 12
+assign R16 22
+
+
+push R16
+push R12
+call foo
+pop SF
+ret
+
+
+.symbolTable 
+Va
+Vb
+Ffoo
